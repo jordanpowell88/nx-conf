@@ -3,7 +3,7 @@ import styles from './jelly.module.css';
 export type JellyFlavor = 'grape' | 'strawberry';
 
 export interface JellyProps {
-  flavor: JellyFlavor
+  flavor: JellyFlavor | undefined
   extra?: boolean
 }
 

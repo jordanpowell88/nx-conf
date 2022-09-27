@@ -3,7 +3,7 @@ import styles from './peanut-butter.module.css';
 export type PeanutButterType = 'crunchy' | 'creamy';
 
 export interface PeanutButterProps {
-  type: PeanutButterType
+  type: PeanutButterType | undefined
   extra?: boolean
 }
 
