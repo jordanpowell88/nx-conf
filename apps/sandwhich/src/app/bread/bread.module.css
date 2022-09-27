@@ -1,0 +1,7 @@
+.slice {
+    background: rgb(255, 218, 150);
+    border-left: solid rgb(211, 136, 92) 10px;
+    border-right: solid rgb(211, 136, 92) 10px;
+    padding: 30px;
+    border-radius: 3px;
+}

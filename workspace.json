@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+  "projects": {
+    "sandwhich": "apps/sandwhich",
+    "sandwhich-e2e": "apps/sandwhich-e2e"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

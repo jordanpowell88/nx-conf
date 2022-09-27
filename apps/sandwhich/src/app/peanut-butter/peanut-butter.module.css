@@ -1,0 +1,18 @@
+.creamy {
+    background: rgb(214, 148, 67);
+    margin: 0 10px;
+}
+
+.crunchy {
+    background: #d69443;
+    margin: 0 10px;
+    border: dotted rgb(157, 104, 39) 5px
+}
+
+.thickness {
+    padding: 10px;
+}
+
+.extra-thickness {
+    padding: 20px;
+}
