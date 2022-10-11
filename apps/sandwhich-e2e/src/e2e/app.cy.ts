@@ -1,13 +1,13 @@
-import { getGreeting } from '../support/app.po';
-
 describe('sandwhich', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome sandwhich');
+  it('should make a sandwhich', () => {
+    cy.get('h3').contains('Sandwhich Menu')
+    cy.get('select').first().select('creamy')
+    cy.get('select').eq(1).select('strawberry')
+    cy.get('input').click()
+    cy.getBySel('bread')
+    cy.getBySel('pb')
+    cy.getBySel('jelly')
   });
 });
