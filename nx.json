@@ -29,15 +29,10 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ]
+      "dependsOn": ["^build"]
     },
     "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json"
-      ]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
     }
   },
   "cli": {
@@ -59,5 +54,5 @@
       }
     }
   },
-  "defaultProject": "sandwhich"
+  "defaultProject": "sandwich"
 }

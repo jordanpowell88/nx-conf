@@ -1,0 +1,12 @@
+.container {
+  padding: 10px;
+  display: inline-flex;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select {
+  padding: 0 5px;
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sandwich/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/sandwich",
+        "index": "apps/sandwich/src/index.html",
+        "baseHref": "/",
+        "main": "apps/sandwich/src/main.tsx",
+        "polyfills": "apps/sandwich/src/polyfills.ts",
+        "tsConfig": "apps/sandwich/tsconfig.app.json",
+        "assets": ["apps/sandwich/src/favicon.ico", "apps/sandwich/src/assets"],
+        "styles": ["apps/sandwich/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/sandwich/src/environments/environment.ts",
+              "with": "apps/sandwich/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sandwich:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sandwich:build:development"
+        },
+        "production": {
+          "buildTarget": "sandwich:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sandwich/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sandwich/cypress.config.ts",
+        "testingType": "component",
+        "devServerTarget": "sandwich:build",
+        "skipServe": true
+      }
+    }
+  },
+  "tags": []
+}

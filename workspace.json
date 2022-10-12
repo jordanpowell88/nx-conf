@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "sandwhich": "apps/sandwhich",
-    "sandwhich-e2e": "apps/sandwhich-e2e"
+    "sandwich": "apps/sandwich",
+    "sandwich-e2e": "apps/sandwich-e2e"
   },
   "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
