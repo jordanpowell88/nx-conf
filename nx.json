@@ -22,21 +22,23 @@
           "component-test"
         ],
         "accessToken": "NTY5MTBlMWYtOTVjZS00ZTY3LTkyMjctY2M2YTg2YmJmMWQyfHJlYWQtd3JpdGU=",
-        "parallel": 1
+        "parallel": 3
       }
     }
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json"
+      ]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
   },
   "generators": {
     "@nrwl/react": {
