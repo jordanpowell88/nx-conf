@@ -17,9 +17,6 @@
   "references": [
     {
       "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./cypress/tsconfig.cy.json"
     }
   ]
 }
